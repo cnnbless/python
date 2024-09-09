@@ -16,4 +16,15 @@ def odd_number():
         
     print(f"list = {numbers} \nparni numbers: {parni_nums}\nneparni nums: {neparni_nums}")
 
-odd_number()
+def is_prime(number):
+    if number < 2:  
+        return False
+    for i in range(2, number): 
+        if number % i == 0:  
+            return False
+    return True  
+
+
+# odd_number()
+
+print(is_prime(4))
