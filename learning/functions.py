@@ -23,8 +23,11 @@ def is_prime(number):
         if number % i == 0:  
             return False
     return True  
-
+def prime_list():
+    for num in range(1,100):
+        if is_prime(num): 
+            print(num)
 
 # odd_number()
-
-print(is_prime(4))
+prime_list()
+# print(is_prime(4))
