@@ -1,5 +1,5 @@
 from random import randint
-
+import random
 def odd_number():
     numbers = []
     parni_nums = []
@@ -40,7 +40,36 @@ def game_rand_num():
             guess = True
             print('you molodec')
 
+import random
+
+def r_p_s():
+    options = {'r': 'rock', 'p': 'paper', 's': 'scissors'}
+    win_logic = {'r': 's', 'p': 'r', 's': 'p'}  
+    won = False
+    
+    while not won:
+        comp_option = random.choice(list(options.keys()))
+        user_option = input("Enter your option (r for rock, p for paper, s for scissors): ").lower()
+
+        if user_option not in options:
+            print("Invalid option. Please choose 'r', 'p', or 's'.")
+            continue  
+
+        print(f"Computer chose: {options[comp_option]}")
+
+        if comp_option == user_option:
+            print("It's a tie, try again.")
+        elif win_logic[comp_option] == user_option:
+            print("Computer won!")
+            won = True
+        else:
+            print("You won!")
+            won = True
+
+
+    
 # odd_number()
 # prime_list()
 # print(is_prime(4))
-game_rand_num()
+# game_rand_num()
+r_p_s()
