@@ -27,7 +27,20 @@ def prime_list():
     for num in range(1,100):
         if is_prime(num): 
             print(num)
+def game_rand_num():
+    num = randint(1,100)
+    guess = False
+    while(guess!=True):
+        user_number = int(input('Enter your number please: '))
+        if (user_number > num):
+            print("your number is too high, try again")
+        elif (user_number < num):
+            print("your number is too low, try again")
+        else:
+            guess = True
+            print('you molodec')
 
 # odd_number()
-prime_list()
+# prime_list()
 # print(is_prime(4))
+game_rand_num()
